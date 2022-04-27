@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="ap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="anchor-pane" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PersonelController">
+   <children>
+      <Button fx:id="geri" layoutX="17.0" layoutY="553.0" mnemonicParsing="false" onAction="#geriClick" prefHeight="27.0" prefWidth="57.0" text="Geri" />
+      <MenuBar fx:id="menuBar" layoutX="-8.0" prefHeight="32.0" prefWidth="809.0" stylesheets="@Home.css">
+        <menus>
+          <Menu mnemonicParsing="false" text="PYS">
+            <items>
+              <MenuItem fx:id="kapat" mnemonicParsing="false" onAction="#Kapat" text="Kapat" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Yardım">
+            <items>
+              <MenuItem fx:id="hakkimizda" mnemonicParsing="false" onAction="#Hakkimizda" text="Hakkımızda" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane fx:id="tpAdmin" layoutY="29.0" prefHeight="497.0" prefWidth="800.0" stylesheets="@Home.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabAdmin" text="Admin İşlemleri">
+            <content>
+              <AnchorPane fx:id="apAdmin" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="429.0" prefWidth="652.0" />
+                        <ImageView fitHeight="148.0" fitWidth="170.0" layoutX="667.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/icon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

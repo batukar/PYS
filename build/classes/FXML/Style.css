@@ -1,0 +1,21 @@
+.anchor-pane{
+    -fx-background-color: #ffb34b;
+    -fx-border-color: #ffb34b;
+}
+.button{
+    -fx-background-color: #ff8339;
+    -fx-background-radius: 25px;
+}
+.text-field{
+    -fx-background-color: #ff8339;
+    -fx-background-radius: 25px;
+    -fx-text-fill: #6F1E51;
+    -fx-prompt-text-fill: #6F1E51;
+}
+.radio-button{
+    -fx-color: #de2826;
+    -fx-progress-color: #ffb34b;
+}
+.tutar{
+    
+}

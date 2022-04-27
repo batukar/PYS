@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="600.0" prefWidth="800.0" styleClass="anchor-pane" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuController">
+   <children>
+      <MenuBar fx:id="menuBar" layoutX="-2.0" layoutY="-1.0" prefHeight="32.0" prefWidth="813.0" styleClass="anchor-pane">
+        <menus>
+          <Menu mnemonicParsing="false" text="PYS">
+            <items>
+              <MenuItem fx:id="kapat" mnemonicParsing="false" onAction="#Kapat" text="Kapat" />
+            </items>
+          </Menu>
+          <Menu fx:id="yardim" mnemonicParsing="false" text="Yardım">
+            <items>
+              <MenuItem fx:id="hakkimizda" mnemonicParsing="false" onAction="#Hakkimizda" text="Hakkımızda" />
+            </items>
+          </Menu>
+        </menus>
+         <stylesheets>
+            <URL value="@Style.css" />
+            <URL value="@Home.css" />
+         </stylesheets>
+      </MenuBar>
+      <TabPane fx:id="tpMenu" layoutY="30.0" prefHeight="401.0" prefWidth="801.0" styleClass="anchor-pane" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabPizza" text="Pizza">
+               <content>
+                  <TabPane fx:id="tpPizza" prefHeight="386.0" prefWidth="801.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="tabKlasik" text="Klasik">
+                        <content>
+                          <AnchorPane fx:id="aKlasik" minHeight="0.0" minWidth="0.0" prefHeight="339.0" prefWidth="801.0">
+                                 <children>
+                                    <AnchorPane fx:id="appKlasik" layoutY="262.0" prefHeight="76.0" prefWidth="800.0">
+                                       <children>
+                                          <TextField fx:id="klasikAdet" alignment="CENTER" layoutX="716.0" layoutY="7.0" prefHeight="27.0" prefWidth="60.0" promptText="Adet" />
+                                          <Label layoutX="14.0" layoutY="26.0" text="Küçük Boy :" textFill="#de2826" />
+                                          <Label layoutX="384.0" layoutY="26.0" prefHeight="17.0" prefWidth="44.0" text="34.95 ₺" textFill="#de2826" />
+                                          <Label layoutX="314.0" layoutY="26.0" text="Büyük Boy :" textFill="#de2826" />
+                                          <Label layoutX="85.0" layoutY="26.0" text="28.95 ₺" textFill="#de2826" />
+                                          <Label layoutX="161.0" layoutY="26.0" text="Orta Boy :" textFill="#de2826" />
+                                          <Label layoutX="468.0" layoutY="26.0" text="Jumbo Boy :" textFill="#de2826" />
+                                          <Label layoutX="222.0" layoutY="26.0" text="31.95 ₺" textFill="#de2826" />
+                                          <Label layoutX="542.0" layoutY="26.0" text="37.95 ₺" textFill="#de2826" />
+                                          <Label layoutX="14.0" layoutY="4.0" text="Fiyatlandırma" textFill="#912020" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="14.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/mezzaluna.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="14.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/5_malzemeli_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="256.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/super_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="256.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/mexico.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="503.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/deluxe.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="503.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/ton_balikli_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#912020" layoutX="121.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Sosu, Extra Mozarella Peyniri, Salam, Sosis, Mantar" wrappingWidth="115.20524597167969" />
+                                    <Text fill="#912020" layoutX="361.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Sosu, Mozarella Peyniri, Ekstra Dilim Sucuk, Siyah Zeytin, Mantar, Yeşil Biber, Mısır" wrappingWidth="157.96361081177565" />
+                                    <Text fill="#912020" layoutX="609.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Sosu, Mozarella Peyniri, Sucuk, Salam, Sosis, Mantar, Yeşil Biber" wrappingWidth="146.6234588623047" />
+                                    <Text fill="#912020" layoutX="121.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Sosu, Mozarella Peyniri, Sucuk, Sosis, Mantar, Yeşil Biber, Mısır" wrappingWidth="132.6545473125293" />
+                                    <Text fill="#912020" layoutX="361.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Sosu,  Mozarella Peyniri, Sucuk, Jalapeno Biber, Mısır, Küp Domates, Mantar, Kekik" wrappingWidth="157.96361081177565" />
+                                    <Text fill="#912020" layoutX="609.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Sosu, Mozarella Peyniri, Ton Balığı, Mısır, Yeşil Biber, Soğan" wrappingWidth="130.90908889410684" />
+                                    <Label layoutX="28.0" layoutY="5.0" text="Mezzaluna" textFill="#912020" />
+                                    <Label layoutX="284.0" layoutY="5.0" text="Süper" textFill="#912020" />
+                                    <Label layoutX="24.0" layoutY="137.0" text="5 Malzemeli" textFill="#912020" />
+                                    <Label layoutX="529.0" layoutY="5.0" text="Deluxe" textFill="#912020" />
+                                    <Label layoutX="518.0" layoutY="137.0" text="Ton Balıklı" textFill="#912020" />
+                                    <Label layoutX="281.0" layoutY="137.0" text="Mexico" textFill="#912020" />
+                                    <HBox layoutX="15.0" layoutY="108.0" prefHeight="19.0" prefWidth="212.0">
+                                       <children>
+                                          <RadioButton fx:id="mezzalunaK" mnemonicParsing="false" onAction="#Mezzaluna" text="Küçük " textFill="#de2826">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="mezzaluna" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="mezzalunaO" mnemonicParsing="false" onAction="#Mezzaluna" text="Orta " textFill="#de2826" toggleGroup="$mezzaluna">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="mezzalunaB" mnemonicParsing="false" onAction="#Mezzaluna" text="Büyük " textFill="#de2826" toggleGroup="$mezzaluna">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="mezzalunaJ" mnemonicParsing="false" onAction="#Mezzaluna" text="Jumbo" textFill="#de2826" toggleGroup="$mezzaluna">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="15.0" layoutY="242.0" prefHeight="19.0" prefWidth="212.0">
+                                       <children>
+                                          <RadioButton fx:id="malzemeliK" mnemonicParsing="false" onAction="#Malzemeli" text="Küçük " textFill="#de2826">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="malzemeli" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="malzemeliO" mnemonicParsing="false" onAction="#Malzemeli" text="Orta " textFill="#de2826" toggleGroup="$malzemeli">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="malzemeliB" mnemonicParsing="false" onAction="#Malzemeli" text="Büyük " textFill="#de2826" toggleGroup="$malzemeli">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="malzemeliJ" mnemonicParsing="false" onAction="#Malzemeli" text="Jumbo" textFill="#de2826" toggleGroup="$malzemeli">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="255.0" layoutY="242.0" prefHeight="19.0" prefWidth="212.0">
+                                       <children>
+                                          <RadioButton fx:id="mexicoK" mnemonicParsing="false" onAction="#Mexico" text="Küçük " textFill="#de2826">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="mexico" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="mexicoO" mnemonicParsing="false" onAction="#Mexico" text="Orta " textFill="#de2826" toggleGroup="$mexico">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="mexicoB" mnemonicParsing="false" onAction="#Mexico" text="Büyük " textFill="#de2826" toggleGroup="$mexico">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="mexicoJ" mnemonicParsing="false" onAction="#Mexico" text="Jumbo" textFill="#de2826" toggleGroup="$mexico">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="255.0" layoutY="108.0" prefHeight="19.0" prefWidth="212.0">
+                                       <children>
+                                          <RadioButton fx:id="superK" mnemonicParsing="false" onAction="#Super" text="Küçük " textFill="#de2826">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="superr" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="superO" mnemonicParsing="false" onAction="#Super" text="Orta " textFill="#de2826" toggleGroup="$superr">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="superB" mnemonicParsing="false" onAction="#Super" text="Büyük " textFill="#de2826" toggleGroup="$superr">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="superJ" mnemonicParsing="false" onAction="#Super" text="Jumbo" textFill="#de2826" toggleGroup="$superr">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="490.0" layoutY="108.0" prefHeight="19.0" prefWidth="212.0">
+                                       <children>
+                                          <RadioButton fx:id="deluxK" mnemonicParsing="false" onAction="#Delux" text="Küçük " textFill="#de2826">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="delux" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="deluxO" mnemonicParsing="false" onAction="#Delux" text="Orta " textFill="#de2826" toggleGroup="$delux">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="deluxB" mnemonicParsing="false" onAction="#Delux" text="Büyük " textFill="#de2826" toggleGroup="$delux">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="deluxJ" mnemonicParsing="false" onAction="#Delux" text="Jumbo" textFill="#de2826" toggleGroup="$delux">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="490.0" layoutY="242.0" prefHeight="19.0" prefWidth="212.0">
+                                       <children>
+                                          <RadioButton fx:id="tonK" mnemonicParsing="false" onAction="#TonBalikli" text="Küçük " textFill="#de2826">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="ton" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="tonO" mnemonicParsing="false" onAction="#TonBalikli" text="Orta " textFill="#de2826" toggleGroup="$ton">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="tonB" mnemonicParsing="false" onAction="#TonBalikli" text="Büyük " textFill="#de2826" toggleGroup="$ton">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="tonJ" mnemonicParsing="false" onAction="#TonBalikli" text="Jumbo" textFill="#de2826" toggleGroup="$ton">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="tabVejeteryan" text="Vejeteryan">
+                        <content>
+                          <AnchorPane fx:id="aVejeteryan" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="14.0" layoutY="23.0" onMouseClicked="#Margarita" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/margarita_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="14.0" layoutY="153.0" onMouseClicked="#Fiesta" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/fiesta_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="256.0" layoutY="23.0" onMouseClicked="#Vejeteryan" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/vejetaryen_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="256.0" layoutY="153.0" onMouseClicked="#Peynirli" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/4_peynirli_pizza_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#912020" layoutX="119.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Sosu, Mozarella Peyniri, Domates" wrappingWidth="121.31431579589844" />
+                                    <Text fill="#912020" layoutX="113.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Sosu, Mozarella Peyniri, Beyaz Peynir, Küp Domates, Siyah Zeytin, Kekik, Parmesan" wrappingWidth="132.6545473125293">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font></Text>
+                                    <Text fill="#912020" layoutX="368.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Sosu, Mozarella Peyniri, Mantar, Fırınlanmış Patlıcan, Siyah Zeytin, Kırmızı Köz Biber, Brokoli" wrappingWidth="198.98187331793497" />
+                                    <Text fill="#912020" layoutX="368.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Sosu, Mozarella Peyniri, Beyaz Peynir, Cheddar, Parmesan, Kekik" wrappingWidth="140.51429748535156" />
+                                    <Label layoutX="31.0" layoutY="6.0" text="Margarita" textFill="#912020" />
+                                    <Label layoutX="42.0" layoutY="136.0" text="Fiesta" textFill="#912020" />
+                                    <Label layoutX="270.0" layoutY="6.0" text="Vejeteryan" textFill="#912020" />
+                                    <Label layoutX="274.0" layoutY="136.0" text="4 Peynirli" textFill="#912020" />
+                                    <HBox layoutX="13.0" layoutY="112.0" prefHeight="19.0" prefWidth="212.0">
+                                       <children>
+                                          <RadioButton fx:id="margaritaK" mnemonicParsing="false" onAction="#Margarita" text="Küçük " textFill="#de2826">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="margarita" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="margaritaO" mnemonicParsing="false" onAction="#Margarita" text="Orta " textFill="#de2826" toggleGroup="$margarita">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="margaritaB" mnemonicParsing="false" onAction="#Margarita" text="Büyük " textFill="#de2826" toggleGroup="$margarita">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="margaritaJ" mnemonicParsing="false" onAction="#Margarita" text="Jumbo" textFill="#de2826" toggleGroup="$margarita">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="13.0" layoutY="245.0" prefHeight="19.0" prefWidth="212.0">
+                                       <children>
+                                          <RadioButton fx:id="fiestaK" mnemonicParsing="false" onAction="#Fiesta" text="Küçük " textFill="#de2826">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="fiesta" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="fiestaO" mnemonicParsing="false" onAction="#Fiesta" text="Orta " textFill="#de2826" toggleGroup="$fiesta">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="fiestaB" mnemonicParsing="false" onAction="#Fiesta" text="Büyük " textFill="#de2826" toggleGroup="$fiesta">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="fiestaJ" mnemonicParsing="false" onAction="#Fiesta" text="Jumbo" textFill="#de2826" toggleGroup="$fiesta">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="256.0" layoutY="112.0" prefHeight="19.0" prefWidth="212.0">
+                                       <children>
+                                          <RadioButton fx:id="vejeteryanK" mnemonicParsing="false" onAction="#Vejeteryan" text="Küçük " textFill="#de2826">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="vejeteryan" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="vejeteryanO" mnemonicParsing="false" onAction="#Vejeteryan" text="Orta " textFill="#de2826" toggleGroup="$vejeteryan">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="vejeteryanB" mnemonicParsing="false" onAction="#Vejeteryan" text="Büyük " textFill="#de2826" toggleGroup="$vejeteryan">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="vejeteryanJ" mnemonicParsing="false" onAction="#Vejeteryan" text="Jumbo" textFill="#de2826" toggleGroup="$vejeteryan">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="262.0" layoutY="245.0" prefHeight="19.0" prefWidth="212.0">
+                                       <children>
+                                          <RadioButton fx:id="peynirliK" mnemonicParsing="false" onAction="#Peynirli" text="Küçük " textFill="#de2826">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="peynirli" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="peynirliO" mnemonicParsing="false" onAction="#Peynirli" text="Orta " textFill="#de2826" toggleGroup="$peynirli">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="peynirliB" mnemonicParsing="false" onAction="#Peynirli" text="Büyük " textFill="#de2826" toggleGroup="$peynirli">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="peynirliJ" mnemonicParsing="false" onAction="#Peynirli" text="Jumbo" textFill="#de2826" toggleGroup="$peynirli">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                    <AnchorPane fx:id="appKlasik1" layoutY="264.0" prefHeight="76.0" prefWidth="800.0">
+                                       <children>
+                                          <TextField fx:id="vejAdet" alignment="CENTER" layoutX="716.0" layoutY="7.0" prefHeight="27.0" prefWidth="60.0" promptText="Adet" />
+                                          <Label layoutX="14.0" layoutY="4.0" text="Fiyatlandırma" textFill="#912020" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="25.0" text="Küçük Boy :" textFill="#de2826" />
+                                          <Label layoutX="384.0" layoutY="25.0" prefHeight="17.0" prefWidth="44.0" text="34.95 ₺" textFill="#de2826" />
+                                          <Label layoutX="314.0" layoutY="25.0" text="Büyük Boy :" textFill="#de2826" />
+                                          <Label layoutX="85.0" layoutY="25.0" text="28.95 ₺" textFill="#de2826" />
+                                          <Label layoutX="161.0" layoutY="25.0" text="Orta Boy :" textFill="#de2826" />
+                                          <Label layoutX="468.0" layoutY="25.0" text="Jumbo Boy :" textFill="#de2826" />
+                                          <Label layoutX="222.0" layoutY="25.0" text="31.95 ₺" textFill="#de2826" />
+                                          <Label layoutX="542.0" layoutY="25.0" text="37.95 ₺" textFill="#de2826" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab fx:id="tabGurme" text="Gurme">
+                          <content>
+                            <AnchorPane fx:id="aGurme" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="14.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/kavurmali_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="14.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/pastirmali_pizza_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="252.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/fume_kaburgali_pizza_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="252.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/tavuklu_brokolili_pizza_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="498.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/anadolu_atesi_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="89.0" fitWidth="97.0" layoutX="498.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/extra_extra.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#912020" layoutX="124.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Sosu, Mozarella Peyniri, Kavurma, Mantar, Yeşil Biber, Soğan" wrappingWidth="123.93246459960938">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font></Text>
+                                    <Text fill="#912020" layoutX="121.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Sosu, Mozarella Peyniri, Pastırma, Domates, Yeşil Biber, Mantar" wrappingWidth="130.90908889410684">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font></Text>
+                                    <Text fill="#912020" layoutX="360.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barbekü Sos, Mozarella Peyniri, Fırınlanmış Patlıcan, Füme Kaburga, Soğan, Mantar, Susam, Kekik" wrappingWidth="143.1272895777006">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font></Text>
+                                    <Text fill="#912020" layoutX="367.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Sosu, Mozarella Peyniri, Tavuk Parçaları, Brokoli, Mısır, Cheddar" wrappingWidth="130.90908889410684">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font></Text>
+                                    <Text fill="#912020" layoutX="601.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Sosu, Mozarella Peyniri, Misket Köfte, Fırınlanmış Patlıcan, Domates, Yeşil Biber, Soğan, Pul Biber" wrappingWidth="179.78172604615065">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font></Text>
+                                    <Text fill="#912020" layoutX="601.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Sosu , Mozarella Peyniri, Küp Sucuk, Dilim Sucuk, Mantar, Yeşil Biber, Soğan, Dilimli Sosis, Siyah Zeytin, Domates, Mısır" wrappingWidth="191.12735061285684">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font></Text>
+                                    <Label layoutX="30.0" layoutY="6.0" text="Kavurmalı" textFill="#912020" />
+                                    <Label layoutX="30.0" layoutY="138.0" text="Pastırmalı" textFill="#912020" />
+                                    <Label layoutX="251.0" layoutY="6.0" text="Füme Kaburgalı" textFill="#912020" />
+                                    <Label layoutX="251.0" layoutY="138.0" text="Tavuklu Brokoli" textFill="#912020" />
+                                    <Label layoutX="508.0" layoutY="6.0" text="Anadolu Ateşi" textFill="#912020" />
+                                    <Label layoutX="511.0" layoutY="138.0" text="Ekstra Ekstra" textFill="#912020" />
+                                    <HBox layoutX="15.0" layoutY="111.0" prefHeight="19.0" prefWidth="212.0">
+                                       <children>
+                                          <RadioButton fx:id="kavurmaliK" mnemonicParsing="false" onAction="#Kavurmali" text="Küçük " textFill="#de2826">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="kavurmali" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="kavurmaliO" mnemonicParsing="false" onAction="#Kavurmali" text="Orta " textFill="#de2826" toggleGroup="$kavurmali">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="kavurmaliB" mnemonicParsing="false" onAction="#Kavurmali" text="Büyük " textFill="#de2826" toggleGroup="$kavurmali">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="kavurmaliJ" mnemonicParsing="false" onAction="#Kavurmali" text="Jumbo" textFill="#de2826" toggleGroup="$kavurmali">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="15.0" layoutY="243.0" prefHeight="19.0" prefWidth="212.0">
+                                       <children>
+                                          <RadioButton fx:id="pastirmaliK" mnemonicParsing="false" onAction="#Pastirmali" text="Küçük " textFill="#de2826">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="pastirmali" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="pastirmaliO" mnemonicParsing="false" onAction="#Pastirmali" text="Orta " textFill="#de2826" toggleGroup="$pastirmali">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="pastirmaliB" mnemonicParsing="false" onAction="#Pastirmali" text="Büyük " textFill="#de2826" toggleGroup="$pastirmali">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="pastirmaliJ" mnemonicParsing="false" onAction="#Pastirmali" text="Jumbo" textFill="#de2826" toggleGroup="$pastirmali">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="254.0" layoutY="111.0" prefHeight="19.0" prefWidth="212.0">
+                                       <children>
+                                          <RadioButton fx:id="kaburgaliK" mnemonicParsing="false" onAction="#Kaburgali" text="Küçük " textFill="#de2826">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="kaburgali" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="kaburgaliO" mnemonicParsing="false" onAction="#Kaburgali" text="Orta " textFill="#de2826" toggleGroup="$kaburgali">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="kaburgaliB" mnemonicParsing="false" onAction="#Kaburgali" text="Büyük " textFill="#de2826" toggleGroup="$kaburgali">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="kaburgaliJ" mnemonicParsing="false" onAction="#Kaburgali" text="Jumbo" textFill="#de2826" toggleGroup="$kaburgali">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="495.0" layoutY="111.0" prefHeight="19.0" prefWidth="212.0">
+                                       <children>
+                                          <RadioButton fx:id="anadoluK" mnemonicParsing="false" onAction="#AnadoluAtesi" text="Küçük " textFill="#de2826">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="anadolu" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="anadoluO" mnemonicParsing="false" onAction="#AnadoluAtesi" text="Orta " textFill="#de2826" toggleGroup="$anadolu">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="anadoluB" mnemonicParsing="false" onAction="#AnadoluAtesi" text="Büyük " textFill="#de2826" toggleGroup="$anadolu">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="anadoluJ" mnemonicParsing="false" onAction="#AnadoluAtesi" text="Jumbo" textFill="#de2826" toggleGroup="$anadolu">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="261.0" layoutY="243.0" prefHeight="19.0" prefWidth="212.0">
+                                       <children>
+                                          <RadioButton fx:id="tavukluK" mnemonicParsing="false" onAction="#Tavuklu" text="Küçük " textFill="#de2826">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="tavuklu" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="tavukluO" mnemonicParsing="false" onAction="#Tavuklu" text="Orta " textFill="#de2826" toggleGroup="$tavuklu">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="tavukluB" mnemonicParsing="false" onAction="#Tavuklu" text="Büyük " textFill="#de2826" toggleGroup="$tavuklu">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="tavukluJ" mnemonicParsing="false" onAction="#Tavuklu" text="Jumbo" textFill="#de2826" toggleGroup="$tavuklu">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="495.0" layoutY="243.0" prefHeight="19.0" prefWidth="212.0">
+                                       <children>
+                                          <RadioButton fx:id="ekstraK" mnemonicParsing="false" onAction="#Ekstra" text="Küçük " textFill="#de2826">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="ekstra" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="ekstraO" mnemonicParsing="false" onAction="#Ekstra" text="Orta " textFill="#de2826" toggleGroup="$ekstra">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="ekstraB" mnemonicParsing="false" onAction="#Ekstra" text="Büyük " textFill="#de2826" toggleGroup="$ekstra">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton fx:id="ekstraJ" mnemonicParsing="false" onAction="#Ekstra" text="Jumbo" textFill="#de2826" toggleGroup="$ekstra">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                    <AnchorPane fx:id="appKlasik2" layoutY="262.0" prefHeight="76.0" prefWidth="800.0">
+                                       <children>
+                                          <TextField fx:id="gurAdet" alignment="CENTER" layoutX="716.0" layoutY="7.0" prefHeight="27.0" prefWidth="60.0" promptText="Adet" />
+                                          <Label layoutX="14.0" layoutY="4.0" text="Fiyatlandırma" textFill="#912020" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="25.0" text="Küçük Boy :" textFill="#de2826" />
+                                          <Label layoutX="384.0" layoutY="25.0" prefHeight="17.0" prefWidth="44.0" text="34.95 ₺" textFill="#de2826" />
+                                          <Label layoutX="314.0" layoutY="25.0" text="Büyük Boy :" textFill="#de2826" />
+                                          <Label layoutX="85.0" layoutY="25.0" text="28.95 ₺" textFill="#de2826" />
+                                          <Label layoutX="161.0" layoutY="25.0" text="Orta Boy :" textFill="#de2826" />
+                                          <Label layoutX="468.0" layoutY="25.0" text="Jumbo Boy :" textFill="#de2826" />
+                                          <Label layoutX="222.0" layoutY="25.0" text="31.95 ₺" textFill="#de2826" />
+                                          <Label layoutX="542.0" layoutY="25.0" text="37.95 ₺" textFill="#de2826" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab fx:id="tabKampanya" text="Kampanya">
+                          <content>
+                            <AnchorPane fx:id="aKampanya" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="k1" fitHeight="89.0" fitWidth="97.0" layoutX="14.0" layoutY="21.0" onMouseClicked="#k1" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/kucuk_klasik_menu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <AnchorPane fx:id="appKlasik3" layoutY="268.0" prefHeight="71.0" prefWidth="800.0">
+                                       <children>
+                                          <TextField fx:id="kamAdet" alignment="CENTER" layoutX="716.0" layoutY="7.0" prefHeight="27.0" prefWidth="60.0" promptText="Adet" />
+                                       </children>
+                                    </AnchorPane>
+                                    <ImageView fx:id="k4" fitHeight="89.0" fitWidth="97.0" layoutX="13.0" layoutY="168.0" onMouseClicked="#k4" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/2_orta_boy_gurme_pizza.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="k2" fitHeight="89.0" fitWidth="97.0" layoutX="249.0" layoutY="21.0" onMouseClicked="#k2" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/kucuk_gurme_menu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="k5" fitHeight="89.0" fitWidth="97.0" layoutX="249.0" layoutY="169.0" onMouseClicked="#k5" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/3_orta_boy_kiyak_pizza.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="k3" fitHeight="89.0" fitWidth="97.0" layoutX="500.0" layoutY="29.0" onMouseClicked="#k3" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/2_orta_boy_kiyak_pizza.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="k6" fitHeight="89.0" fitWidth="97.0" layoutX="500.0" layoutY="169.0" onMouseClicked="#k6" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/10_numara_fiat_menusu_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="14.0" layoutY="12.0" text="Orta Klasik Menü" textFill="#912020" />
+                                    <Label layoutX="14.0" layoutY="151.0" text="2 Orta Boy Gurme Pizza" textFill="#912020" />
+                                    <Label layoutX="245.0" layoutY="12.0" text="Orta Gurme Menü" textFill="#912020" />
+                                    <Label layoutX="235.0" layoutY="151.0" text="3 Orta Boy Klasik Pizza" textFill="#912020" />
+                                    <Label layoutX="486.0" layoutY="12.0" text="2 Orta Boy Klasik Pizza" textFill="#912020" />
+                                    <Label layoutX="517.0" layoutY="151.0" text="10 Numara" textFill="#912020" />
+                                    <Text fill="#912020" layoutX="107.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Küçük Boy Klasik Pizza, Parmak Patates, Kutu İçecek" wrappingWidth="121.31431579589844" />
+                                    <Text fill="#912020" layoutX="342.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Küçük Boy Gurme Pizza, Parmak Patates, Kutu İçecek" wrappingWidth="121.31431579589844" />
+                                    <Text fill="#912020" layoutX="593.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dilediğin 2 Adet Orta Boy Klasik Pizza" wrappingWidth="121.31431579589844" />
+                                    <Text fill="#912020" layoutX="115.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dilediğin 2 Adet Orta Boy Gurme Pizza" wrappingWidth="121.31431579589844" />
+                                    <Text fill="#912020" layoutX="350.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dilediğin 3 Adet Orta Boy Klasik Pizza" wrappingWidth="121.31431579589844" />
+                                    <Text fill="#912020" layoutX="604.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2 Orta Boy Ortaya Karışık Pizza, Parmak Patates , 1 Litre Coca-Cola " wrappingWidth="121.31431579589844" />
+                                    <Label layoutX="41.0" layoutY="117.0" text="31.95 ₺" textFill="#de2826" />
+                                    <Label layoutX="276.0" layoutY="117.0" text="35.95 ₺" textFill="#de2826" />
+                                    <Label layoutX="525.0" layoutY="117.0" text="39.95 ₺" textFill="#de2826" />
+                                    <Label layoutX="40.0" layoutY="257.0" text="41.95 ₺" textFill="#de2826" />
+                                    <Label layoutX="275.0" layoutY="257.0" text="50.95 ₺" textFill="#de2826" />
+                                    <Label layoutX="527.0" layoutY="257.0" text="79.95 ₺" textFill="#de2826" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+          </Tab>
+          <Tab fx:id="tabKizartma" text="Kızartma">
+               <content>
+                  <TabPane fx:id="tpKizartma" prefHeight="200.0" prefWidth="200.0" styleClass="anchor-pane" stylesheets="@Style.css" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="tabPatates" text="Patates">
+                        <content>
+                          <AnchorPane fx:id="aPatates" minHeight="0.0" minWidth="0.0" prefHeight="126.0" prefWidth="801.0">
+                                 <children>
+                                    <ImageView fx:id="parmakPatates" fitHeight="89.0" fitWidth="97.0" layoutX="23.0" layoutY="14.0" onMouseClicked="#ParmakPatates" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/parmak_patates.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="elmaPatates" fitHeight="89.0" fitWidth="97.0" layoutX="23.0" layoutY="130.0" onMouseClicked="#ElmaPatates" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/elma_dilim_patates.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="kova" fitHeight="89.0" fitWidth="97.0" layoutX="258.0" layoutY="14.0" onMouseClicked="#Kova" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/citir_kovasi.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="12.0" layoutY="111.0" text="Parmak Dilim Patates" textFill="#912020" />
+                                    <Label layoutX="19.0" layoutY="227.0" text="Elma Dilim Patates" textFill="#912020" />
+                                    <Label layoutX="278.0" layoutY="111.0" text="Çıtır Kova" textFill="#912020" />
+                                    <Text layoutX="363.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parmak Patates, 4'lü Hot Chicks, 2'li Chicken Fingers, 4'lü Soğan Halkası" wrappingWidth="213.09970092773438" />
+                                    <Label layoutX="185.0" layoutY="111.0" text="8,95 ₺ " textFill="#de2826" />
+                                    <Label layoutX="185.0" layoutY="227.0" text="8,95 ₺" textFill="#de2826" />
+                                    <Label layoutX="441.0" layoutY="111.0" text="20,95 ₺" textFill="#de2826" />
+                                    <AnchorPane fx:id="appGurme18" layoutY="259.0" prefHeight="88.0" prefWidth="801.0">
+                                       <children>
+                                          <TextField fx:id="patAdet" alignment="CENTER" layoutX="719.0" layoutY="14.0" prefHeight="27.0" prefWidth="57.0" promptText="Adet" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="tabNugget" text="Nugget">
+                        <content>
+                          <AnchorPane fx:id="aNugget" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="nuggets" fitHeight="89.0" fitWidth="97.0" layoutX="24.0" layoutY="14.0" onMouseClicked="#Nugget" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/4lu_nuggets.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="nugget" layoutX="36.0" layoutY="112.0" onMouseClicked="#Nugget" text="4'lü Nuggets" textFill="#912020" />
+                                    <Label layoutX="179.0" layoutY="112.0" text="7,95 ₺" textFill="#de2826" />
+                                    <AnchorPane fx:id="appGurme17" layoutY="259.0" prefHeight="88.0" prefWidth="801.0">
+                                       <children>
+                                          <TextField fx:id="nugAdet" alignment="CENTER" layoutX="722.0" layoutY="14.0" prefHeight="27.0" prefWidth="57.0" promptText="Adet" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab fx:id="tabSoganHalkasi" text="Soğan Halkası">
+                          <content>
+                            <AnchorPane fx:id="aSoganHalkasi" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="soganH" fitHeight="89.0" fitWidth="97.0" layoutX="22.0" layoutY="14.0" onMouseClicked="#SoganHalkasi" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/4lu_sogan_halkasi_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="soganHalkasi" layoutX="19.0" layoutY="114.0" onMouseClicked="#SoganHalkasi" text="4'lü Soğan Halkası" />
+                                    <Label layoutX="185.0" layoutY="114.0" text="5,95 ₺" textFill="#de2826" />
+                                    <AnchorPane fx:id="appGurme16" layoutY="259.0" prefHeight="88.0" prefWidth="801.0">
+                                       <children>
+                                          <TextField fx:id="sogAdet" alignment="CENTER" layoutX="717.0" layoutY="14.0" prefHeight="27.0" prefWidth="57.0" promptText="Adet" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab fx:id="tabOzelSosluKanat" text="Özel Soslu Kanat">
+                          <content>
+                            <AnchorPane fx:id="aOzelSosluKanat" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="hotC" fitHeight="89.0" fitWidth="97.0" layoutX="20.0" layoutY="14.0" onMouseClicked="#HotChicks" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/4lu_hot_chicks.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="tavukKanat" fitHeight="89.0" fitWidth="97.0" layoutX="20.0" layoutY="140.0" onMouseClicked="#TavukKanat" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/4lu_firinda_tavuk_kanat.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="hotChicks" layoutX="26.0" layoutY="110.0" onMouseClicked="#HotChicks" text="4'lü Hot Chicks" textFill="#912020" />
+                                    <Label layoutX="2.0" layoutY="238.0" text="4'lü Fırında Tavuk Kanat" textFill="#912020" />
+                                    <Label layoutX="190.0" layoutY="110.0" text="6,95 ₺" textFill="#de2826" />
+                                    <Label layoutX="190.0" layoutY="238.0" text="7,95 ₺" textFill="#de2826" />
+                                    <AnchorPane fx:id="appGurme15" layoutX="2.0" layoutY="259.0" prefHeight="88.0" prefWidth="801.0">
+                                       <children>
+                                          <TextField fx:id="kanAdet" alignment="CENTER" layoutX="717.0" layoutY="14.0" prefHeight="27.0" prefWidth="57.0" promptText="Adet" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+          </Tab>
+            <Tab fx:id="tabIcecek" text="İçecek">
+               <content>
+                  <TabPane fx:id="tpIcecek" minHeight="-Infinity" minWidth="-Infinity" prefHeight="197.0" prefWidth="801.0" styleClass="anchor-pane" stylesheets="@Style.css" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="tabKola" text="Kola">
+                           <content>
+                              <AnchorPane fx:id="aKola" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="cc330" fitHeight="89.0" fitWidth="97.0" layoutX="22.0" layoutY="14.0" onMouseClicked="#cc330" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/cocacola_33_cl.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="cc330z" fitHeight="89.0" fitWidth="97.0" layoutX="22.0" layoutY="130.0" onMouseClicked="#cc330z" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/cocacola_sekersiz_33_cl.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="cc1" fitHeight="89.0" fitWidth="97.0" layoutX="251.0" layoutY="20.0" onMouseClicked="#cc1" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/cocacola_1_l.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="cc1z" fitHeight="89.0" fitWidth="97.0" layoutX="251.0" layoutY="130.0" onMouseClicked="#cc1z" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/1_l_cocacola_sekersiz_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="25.0" layoutY="109.0" text="330ml CocaCola" textFill="#912020" />
+                                    <Label layoutX="262.0" layoutY="109.0" text="1Lt CocaCola" textFill="#912020" />
+                                    <Label layoutX="11.0" layoutY="219.0" text="330ml CocaCola Zero" textFill="#912020" />
+                                    <Label layoutX="248.0" layoutY="219.0" text="1Lt CocaCola Zero" textFill="#912020" />
+                                    <Label layoutX="167.0" layoutY="109.0" text="5,95 ₺ " textFill="#de2826" />
+                                    <Label layoutX="167.0" layoutY="219.0" text="5,95 ₺" textFill="#de2826" />
+                                    <Label layoutX="401.0" layoutY="109.0" text="12,95 ₺" textFill="#de2826" />
+                                    <Label layoutX="401.0" layoutY="219.0" text="12,95 ₺" textFill="#de2826" />
+                                    <AnchorPane fx:id="appGurme1" layoutY="264.0" prefHeight="94.0" prefWidth="801.0">
+                                       <children>
+                                          <TextField fx:id="kolAdet" alignment="CENTER" layoutX="721.0" layoutY="7.0" prefHeight="27.0" prefWidth="57.0" promptText="Adet" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                      <Tab fx:id="tabFanta" text="Fanta">
+                           <content>
+                              <AnchorPane fx:id="aFanta" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="f330" fitHeight="89.0" fitWidth="97.0" layoutX="24.0" layoutY="14.0" onMouseClicked="#f330" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/fanta_33_cl.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="f1" fitHeight="89.0" fitWidth="97.0" layoutX="24.0" layoutY="130.0" onMouseClicked="#f1" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/1_l_fanta.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="37.0" layoutY="103.0" text="330ml Fanta" textFill="#912020" />
+                                    <Label layoutX="46.0" layoutY="218.0" text="1Lt Fanta" textFill="#912020" />
+                                    <Label layoutX="160.0" layoutY="103.0" text="5,95 ₺" textFill="#de2826" />
+                                    <Label layoutX="160.0" layoutY="218.0" text="12,95 ₺" textFill="#de2826" />
+                                    <AnchorPane fx:id="appGurme11" layoutY="259.0" prefHeight="88.0" prefWidth="801.0">
+                                       <children>
+                                          <TextField fx:id="fanAdet" alignment="CENTER" layoutX="718.0" layoutY="14.0" prefHeight="27.0" prefWidth="57.0" promptText="Adet" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="tabAyran" text="Ayran">
+                           <content>
+                              <AnchorPane fx:id="aAyran" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="a500" fitHeight="89.0" fitWidth="97.0" layoutX="27.0" layoutY="15.0" onMouseClicked="#a500" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/kutu_ayran.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="a1" fitHeight="89.0" fitWidth="97.0" layoutX="27.0" layoutY="132.0" onMouseClicked="#a1" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/1_l_ayran.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="41.0" layoutY="96.0" text="0,5ml Ayran" textFill="#912020" />
+                                    <Label layoutX="159.0" layoutY="96.0" text="2,95 ₺" textFill="#de2826" />
+                                    <Label layoutX="47.0" layoutY="221.0" text="1Lt Ayran" textFill="#912020" />
+                                    <Label layoutX="159.0" layoutY="221.0" text="6,95 ₺" textFill="#de2826" />
+                                    <AnchorPane fx:id="appGurme12" layoutY="265.0" prefHeight="95.0" prefWidth="801.0">
+                                       <children>
+                                          <TextField fx:id="ayAdet" alignment="CENTER" layoutX="716.0" prefHeight="27.0" prefWidth="57.0" promptText="Adet" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="tabCay" text="Çay">
+                          <content>
+                            <AnchorPane fx:id="aCay" minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="801.0">
+                                 <children>
+                                    <AnchorPane fx:id="appGurme13" layoutY="259.0" prefHeight="88.0" prefWidth="801.0">
+                                       <children>
+                                          <TextField fx:id="cayAdet" alignment="CENTER" layoutX="714.0" layoutY="6.0" prefHeight="27.0" prefWidth="57.0" promptText="Adet" />
+                                       </children>
+                                    </AnchorPane>
+                                    <ImageView fx:id="cay" fitHeight="89.0" fitWidth="97.0" layoutX="21.0" layoutY="37.0" onMouseClicked="#Cay" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/2675210_cay-buyuk.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="59.0" layoutY="96.0" text="Çay" textFill="#912020" />
+                                    <Label layoutX="153.0" layoutY="96.0" text="İkram" textFill="#de2826" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab fx:id="tabSu" text="Su">
+                          <content>
+                            <AnchorPane fx:id="aSu" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="su500" fitHeight="89.0" fitWidth="97.0" layoutX="19.0" layoutY="15.0" onMouseClicked="#su500" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/su_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="42.0" layoutY="105.0" text="0,5ml Su" textFill="#912020" />
+                                    <Label layoutX="156.0" layoutY="105.0" text="0,95 ₺" textFill="#de2826" />
+                                    <AnchorPane fx:id="appGurme14" layoutY="259.0" prefHeight="88.0" prefWidth="801.0">
+                                       <children>
+                                          <TextField fx:id="suAdet" alignment="CENTER" layoutX="720.0" layoutY="14.0" prefHeight="27.0" prefWidth="57.0" promptText="Adet" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+            </Tab>
+        </tabs>
+         <stylesheets>
+            <URL value="@Style.css" />
+            <URL value="@Home.css" />
+         </stylesheets>
+      </TabPane>
+      <Label fx:id="tutar" layoutX="600.0" layoutY="553.0" text="₺" textFill="#912020">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="hesap" alignment="CENTER" layoutX="511.0" layoutY="549.0" prefHeight="31.0" prefWidth="79.0" promptText="Tutar" styleClass="text-field" stylesheets="@Style.css">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="geri" layoutX="21.0" layoutY="547.0" mnemonicParsing="false" onAction="#geriButtonAction" text="Geri" textFill="#912020">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="tamamla" layoutX="630.0" layoutY="547.0" mnemonicParsing="false" onAction="#tamamlaButtonAction" text="Siparişi Tamamla" textFill="#912020">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="secim" layoutX="94.0" layoutY="520.0" prefHeight="62.0" prefWidth="406.0" promptText="Seçiminiz..." />
+      <Button fx:id="hesapla" layoutX="511.0" layoutY="520.0" mnemonicParsing="false" onAction="#Sifirla" prefHeight="27.0" prefWidth="79.0" text="Temizle" textFill="#912020" />
+      <ImageView fx:id="img2" fitHeight="82.0" fitWidth="397.0" layoutX="398.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/Turuncu2.jpg" />
+         </image></ImageView>
+      <ImageView fx:id="img1" fitHeight="82.0" fitWidth="407.0" layoutX="14.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/Turuncu4.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
